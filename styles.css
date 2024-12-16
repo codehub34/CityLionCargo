@@ -316,6 +316,14 @@ align-items: center;
   }
 
   
+.s-box img {
+  width: 260px;
+  mix-blend-mode: screen;
+ background-color: #e000d5b7;
+  border-radius: 8px;
+  padding: 5px 10px;
+}
+  
 .about-text{
   width: 100%;
 }
@@ -340,6 +348,15 @@ align-items: center;
     box-shadow: 0 4px 4px rgb(0 0 0 / 10%);
     transition: 0.2s ease;
   }
+
+  
+.s-box img {
+  width: 260px;
+  mix-blend-mode: screen;
+ background-color: #e000d5b7;
+  border-radius: 8px;
+  padding: 5px 10px;
+}
   .navbar.active {
     top: 100%;
   }

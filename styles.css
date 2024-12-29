@@ -782,6 +782,7 @@ border-radius: 45px;
   }
   
 
+
   
 .about-content{
   width: 100%;
@@ -964,102 +965,174 @@ border-radius: 45px;
 }
 
 
-/* Form Page */
-
- .container{
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  padding: 5% 70px;
-  flex-wrap: wrap-reverse;
- }
-
-
  /* Contact Us Section */
 
- .contact-us{
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: rgba(134, 165, 177, 0.719);
- padding: 15px;
- margin-left: auto;
- margin-right: auto;
- }
 
- .contact-content{
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
-  /* width: 60%; */
- 
- }
-
-
- hr{
-    background-color: rgb(255, 253, 253);
-    height:6px;
-  }
-  .contact-form { 
-    /* background: linear-gradient( to bottom, rgba(146, 135, 110, 0.616)  10%, rgba(223, 106, 106, 0.479) 80% ), url('CompanyImage/warehouse-and-storage img.jpg'); */
-     padding: 10px; 
-     font-size: 18px; 
-     line-height: 15px; 
-     max-width: 100%; 
-     border-radius: 10px;  
-    }
-
-  .contact-form-text  {
-    width: 100%;
-    text-transform: uppercase;
-    text-align: center;
-    /* text-decoration: overline; */
-    text-shadow: 3px 0px 2px  white;
-    margin-top: 30px;
-  }
 
 
   /* Contact Us Media */
   
 @media  screen and (max-width: 768px) { 
   
-
-}  
-
-
-/* Form Styles */
-
-
-.contact-container { 
-  height: 206px;
-  background-image: url(CompanyImage/Shipping-Companies_.jpg);
-  filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.397));
-  border-bottom-right-radius: 45%;
-  border-bottom-left-radius: 45%;
-
-}
-
 .contact-content{
-  display: flex; 
+  display: flex;
   flex-wrap: wrap;
-  flex-direction: row;
-  justify-content: space-evenly;
   align-items: center;
 }
 
-.contact-img .contact-form{
-  flex-grow: 1;
-  flex-basis: 200px;
+
+.contact-text{
   width: 100%;
-  margin-top: 2rem;
 }
 
-.contact-img img{
-  max-width: 100%;
-  width: 500px;
-  margin-left: auto;
-  margin-right: auto;
+
   
+.contentanimate .work-hours{
+  font-size: 1.8em;
+}
+
+.work-hours > span {
+  position: relative;
+  display: inline-block;
+  color: orangered;
+  height: 1.25em;
+  vertical-align: bottom;
+  overflow: hidden;
+  font-size: 1.1em;
+}
+
+.contact-text li:last-child {
+  color: #550202;
+  background-color: rgba(255, 255, 255, 0.4); /* Updated to use rgba for more clarity */
+  padding: 10px;
+  box-shadow: 0 12px 0 rgb(184, 71, 71);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  border-radius: 8px;
+  animation: hoursbar 2s;
+  text-transform: uppercase;
+  text-align: center;
+  margin-top: 12px;
+  margin-right: 12px;
+  backdrop-filter: blur(10px); /* Added a space for better readability */
+}
+
+}  
+.contact-container { 
+ background-image: url(Shipping-Companies_.jpg);
+  filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.397));
+  border-bottom-right-radius: 45%;
+  border-bottom-left-radius: 45%;
+}
+
+.contact-content{
+  display: flex;
+  justify-content: space-around;
+  gap: 40px;
+  width: 100%;
+}
+
+.contact-text{
+  max-width: 500px;
+  width: 100%;
+}
+
+/* Animation */
+
+
+.contentanimate {
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f967;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+ border-radius: 8px;
+
+}
+
+.work-hours{
+  font-size: 3.5em;
+}
+
+.work-hours > span {
+  position: relative;
+  display: inline-block;
+  color: orangered;
+  height: 1.25em;
+  vertical-align: bottom;
+  overflow: hidden;
+}
+
+.work-hours >span > span{
+  display: block;
+  animation: animate1 5s infinite ease;
+}
+
+@keyframes animate1 {
+  0% {transform: translateY(0%);}
+  25% {transform: translateY(-100%);}
+  50% { transform: translateY(-200%);}
+  75% { transform: translateY(-300%);}
+  100% { transform: translateY(-400%);}
   
 }
+
+
+/* Animation stop time */
+.contact-text ol{
+  list-style: none;
+  padding: 0 auto;
+}
+
+.contact-text li{
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: 800;
+  font-size: 18px;
+  animation: hoursbar 2s;
+}
+
+.contact-text li:last-child{
+  color: #550202;
+  background-color: #ffffff;
+  padding: 10px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  border-radius: 8px;
+  animation: hoursbar 2s;
+  text-transform: uppercase;
+  box-shadow: 0 12px 0 rgb(184, 71, 71);
+}
+
+@keyframes hoursbar {
+  from {
+    transform: scale(1) translate(-50%);
+   
+}
+}
+
+.main-address1{
+  width: 300px; 
+  overflow: auto;
+}
+.main-address {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px; /* Optional: Adding some space between the grid items */
+}
+
+@media (max-width: 768px) {
+  .main-address {
+    grid-template-columns: 1fr; /* Single column layout for smaller screens */
+  }
+
+  
+.contact-mailling{
+  padding: 0 30px;
+
+}
+
+}
+
+

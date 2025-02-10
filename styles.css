@@ -322,8 +322,8 @@ header{
   
 .container-head{
   background: linear-gradient( to bottom, rgba(82, 37, 37, 0.699)  10%, rgba(223, 106, 106, 0.479) 80% ), url('warehouse-and-storage\ img.jpg');
-  padding: 10% 70px;
-  background-position: top;
+  padding: 4% 50px;
+  background-position: center;
   background-size: cover;
 
   /* display: inline-block; */
@@ -348,56 +348,56 @@ border-radius: 45px;
 
 }
 
-
-
 .head-img img{
   width: 100%;
-  animation-name: animate;
-  animation-duration: 12s;
+  animation-name: boatMove;
+  animation-duration: 5s;
   animation-iteration-count: infinite;
- 
-  /* background-color: rgba(255, 255, 255, 0.438); */
-  filter: drop-shadow( 5px 45px 5px rgb(255, 255, 255));
-  
+  animation-timing-function: ease-in-out;
+  filter: drop-shadow(5px 45px 5px rgb(255, 255, 255));
 }
 
-@keyframes animate {
-  0%{
-    transform: skewY(0deg);
+@keyframes boatMove {
+  0%, 100% {
+    transform: translateY(0);
   }
-  50%{
-    transform: skewY(20deg);
+  50% {
+    transform: translateY(-20px);
   }
 }
-
 .head-imglogo{
   filter: drop-shadow( 15px 5px 5px white);
   width: 130px;
   position: relative;
   animation-name: dance;
   animation-duration: 8s;
-   animation-iteration-count: infinite;
-   animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+  animation-fill-mode: forwards;
 }
 
-
-
 @keyframes dance {
-  0%{
+  0% {
     left: -10%;
     opacity: 1;
+    transform: translateY(0);
   }
-  50%{
-   left: 50%;
-   /* opacity: 0; */
-   transform: rotate(-10deg);
+  25% {
+    left: 10%;
+    transform: translateY(-30px);
   }
-
-  100%{
-   left: -10%;
-   /* opacity: 0; */
+  50% {
+    left: 50%;
+    transform: translateY(0) rotate(-10deg);
   }
-
+  75% {
+    left: 30%;
+    transform: translateY(-20px);
+  }
+  100% {
+    left: -10%;
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 
@@ -861,25 +861,32 @@ border-radius: 45px;
   text-align: center;
   letter-spacing: 2px;
 }
-
-
 .typing {
-    width: 100%;
-    overflow: hidden;
-    margin: 0 auto;
-    text-align: center;
-    /* white-space: wrap; */
-    /* border-right: 2px solid #a0322e; */
-    animation: typing 4s steps(12, end), cursor .2s steps(12, end) infinite;
-    animation-iteration-count: infinite;
+  width: 100%;
+  overflow: hidden;
+  margin: 0 auto;
+  text-align: center;
+  animation: typing 8s steps(40, end), cursor .8s steps(40, end) infinite, moveLetters 8s infinite;
+  animation-iteration-count: infinite;
+}
 
-}
 @keyframes typing {
-    from { width: 0 }
+  from { width: 0 }
 }
+
 @keyframes cursor {
-    50% { border-color: transparent }
+  50% { border-color: transparent }
 }
+
+@keyframes moveLetters {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.5);
+  }
+}
+
 
 .service-content p{
   font-family: "Schibsted Grotesk", sans-serif;
@@ -966,28 +973,28 @@ border-radius: 45px;
 
 
  /* Contact Us Section */
+.contact-container{
+  width: 100%;
+  background: linear-gradient( to right, rgba(211, 139, 112, 0.365), #f1a307b4);
+  padding: 20px;
+}
+.contact-item{
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
 
+.contact-us{
+  width: 400px;
+}
 
 
 
   /* Contact Us Media */
   
 @media  screen and (max-width: 768px) { 
-  
-.contact-content{
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  width: 100%;
-}
-
-
-.contact-text{
-  width: 100%;
-}
-
-
-  
 .contentanimate .work-hours{
   font-size: 1.8em;
 }
@@ -1002,41 +1009,7 @@ border-radius: 45px;
   font-size: 1.1em;
 }
 
-.contact-text li:last-child {
-  color: #550202;
-  background-color: rgba(255, 255, 255, 0.4); /* Updated to use rgba for more clarity */
-  padding: 10px;
-  box-shadow: 0 12px 0 rgb(184, 71, 71);
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  border-radius: 8px;
-  animation: hoursbar 2s;
-  text-transform: uppercase;
-  text-align: center;
-  margin-top: 12px;
-  margin-right: 12px;
-  backdrop-filter: blur(10px); /* Added a space for better readability */
-}
-
 }  
-.contact-container { 
- background-image: url(Shipping-Companies_.jpg);
-  filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.397));
-  border-bottom-right-radius: 45%;
-  border-bottom-left-radius: 45%;
-  padding: 10px 15px[ ];
-}
-
-.contact-content{
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  gap: 40px;
-  width: 100%;
-}
-
-.contact-content .contact-text{
-  width: 100%;
-}
 /* Animation */
 
 
@@ -1052,7 +1025,7 @@ width: 50%;
 }
 
 .work-hours{
-  font-size: 3.5em;
+  font-size: 2.5em;
   
 }
 
@@ -1078,80 +1051,4 @@ width: 50%;
   100% { transform: translateY(-400%);}
   
 }
-
-
-/* Animation stop time */
-.contact-text ol{
-  list-style: none;
-  padding: 0 auto;
-}
-
-.contact-text li{
-  font-family: 'Courier New', Courier, monospace;
-  font-weight: 800;
-  font-size: 15px;
-  animation: hoursbar 2s;
-}
-
-.contact-text li:last-child{
-  color: #550202;
-  background-color: #ffffff;
-  padding: 10px;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  border-radius: 8px;
-  animation: hoursbar 2s;
-  text-transform: uppercase;
-  box-shadow: 0 12px 0 rgb(184, 71, 71);
-  width: 50%;
-}
-
-@keyframes hoursbar {
-  from {
-    transform: scale(1) translate(-50%);
-   
-}
-}
-
-.main-address1{
-  width: 200px;
-  height: 200px;
-  /* overflow: auto; */
-}
-.main-address {
- display: flex;
- justify-content: center;
- align-items: center;
-}
-
-@media (max-width: 768px) {
-  .main-address {
-    display: flex;
-    flex-wrap: wrap;
-  }
-
-  
-.main-address1{
-  width: 200px;
-  height: 200px;
-  /* overflow: auto; */
-}
-
-
-.contentanimate {
-width: 100%;
-
-}
-
-.contact-text li:last-child{
-  width: 100%;
-}
-
-  
-.contact-mailling{
-  padding: 0 20px;
-
-}
-
-}
-
 

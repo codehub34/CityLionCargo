@@ -1020,7 +1020,6 @@ text-align: center;
   font-size: 18px;
 }
 
-<<<<<<< HEAD
 @keyframes bounce {
   0%, 20%, 50%, 80%, 100% {
     transform: translateY(0);
@@ -1033,7 +1032,7 @@ text-align: center;
   60% {
     transform: translateY(-10px);
   }
-=======
+}
 .contact-us{
   width: 100%;
 }
@@ -1074,7 +1073,6 @@ box-shadow: 0 4px 8px rgba(255, 255, 255, 0.234);
 
 .form-item{
   margin: 10px;
->>>>>>> e40160f63aa26472d3c57bfa3dd05129771cd1c3
 }
 
 .contactUs-Item h2 {
@@ -1088,18 +1086,8 @@ box-shadow: 0 4px 8px rgba(255, 255, 255, 0.234);
   max-width: 499px;
 }
 
-<<<<<<< HEAD
 .contentanimate {
   text-align: center;
-=======
-
-
-  /* Contact Us Media */
-  
-@media  screen and (max-width: 768px) { 
-.contentanimate .work-hours{
-  font-size: 1.8em;
->>>>>>> e40160f63aa26472d3c57bfa3dd05129771cd1c3
 }
 
 .work-hours {
@@ -1121,18 +1109,12 @@ box-shadow: 0 4px 8px rgba(255, 255, 255, 0.234);
   margin-bottom: px;
 }
 
-<<<<<<< HEAD
 .workTable li:nth-child(1)::first-letter{
   background-color: #4e0404;
   color: white;
   font-size: 1.5em;
   font-family: 'Times New Roman', Times, serif;
 }
-=======
-.contentanimate {
- font-family: Arial, sans-serif;
- padding: 10px;
->>>>>>> e40160f63aa26472d3c57bfa3dd05129771cd1c3
 
 
 .workTable li:nth-child(2)::first-letter{
@@ -1142,7 +1124,6 @@ box-shadow: 0 4px 8px rgba(255, 255, 255, 0.234);
   font-family: 'Times New Roman', Times, serif;
 }
 
-<<<<<<< HEAD
 
 .workTable li:nth-child(3)::first-letter{
   background-color: #4e0404;
@@ -1249,14 +1230,6 @@ box-shadow: 0 4px 8px rgba(255, 255, 255, 0.234);
     transform: translateY(-10px);
   }
 }
-=======
-.work-hours{
-  font-size: 2.5rem;
-  font-family: Georgia, 'Times New Roman', Times, serif;
-  letter-spacing: 3px;
- 
-  
->>>>>>> e40160f63aa26472d3c57bfa3dd05129771cd1c3
 }
 
 /* Animation */

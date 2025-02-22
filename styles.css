@@ -8,12 +8,7 @@
         --navbar-height: 64px;
         --footer-height: 50px;
         --font-family: Bebas;
-        --navbar-bg-color: #ffffff; /* Define the navbar background color */
-        --desktop: 1200px;
-        --laptop: 1024px;
-        --tablet: 768px;
-        --phone: 480px; 
-    }
+      }
   
        
 * {
@@ -1000,96 +995,202 @@ text-align: center;
 }
 
 
- /* Contact Us Section */
-.contact-container{
-  width: 100%;
-  background: linear-gradient( to left, rgba(34, 10, 2, 0.749), #ffffffb4), url(freight-services.jpg);
+/* Contact Us Section */
+.contact-container {
+  max-width: 100%;
+  background: linear-gradient(to right, rgba(84, 176, 213, 0.749), rgba(213, 116, 84, 0.749));
   padding: 20px;
   background-position: center;
   background-size: cover;
-  
+  margin: 0 auto;
+  background-color: rgba(190, 148, 148, 0.319); /* Background opacity */
+  backdrop-filter: blur(5px); /* Backdrop filter blur */
 }
-.contact-item{
+
+
+.contact-item {
   width: 100%;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 20px;
+  gap: 10px;
   padding: 20px;
 }
-
-.contact-us{
-  width: 100%;
-}
-
 .contactUs-Item{
- max-width: 100%;
- width: 500px;
- 
-}
-
-.contactUs-Item h2{
-  font-size: 1.96rem;
-  color: rgb(58, 39, 39);
-  font-weight: 700;
-  letter-spacing: 1px;
-}
-
-
-.contactUs-Item p{
   font-size: 18px;
 }
 
-
-.form-item{
-  margin: 10px;
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+    color: #ffffff;
+  }
+  40% {
+    transform: translateY(-20px);
+    color: #0a1dcb;
+  }
+  60% {
+    transform: translateY(-10px);
+  }
 }
 
-
-
-
-
-  /* Contact Us Media */
-  
-@media  screen and (max-width: 768px) { 
-.contentanimate .work-hours{
-  font-size: 1.8em;
+.contactUs-Item h2 {
+  font-size: 2rem;
+  border-radius: 12px;
+  animation: bounce 2s infinite;
+  color: white;
 }
 
-.work-hours > span {
-  position: relative;
-  display: inline-block;
-  color: orangered;
-  height: 1.25em;
-  vertical-align: bottom;
-  overflow: hidden;
-  font-size: 1.1em;
+.contactUs-Item p{
+  max-width: 499px;
 }
-
-.slideSpan{
-  font-size: .8em;
-}
-
-
-
-
-}  
-/* Animation */
-
 
 .contentanimate {
- font-family: Arial, sans-serif;
- padding: 10px;
-
+  text-align: center;
 }
 
-.work-hours{
-  font-size: 2.5rem;
-  font-family: Georgia, 'Times New Roman', Times, serif;
-  letter-spacing: 3px;
- 
-  
+.work-hours {
+  font-size: 24px;
 }
 
+.slideSpan {
+  display: inline-block;
+  margin-right: 5px;
+}
+
+.workTable ol {
+  list-style-type: none;
+  padding: 0;
+}
+
+.workTable li {
+  font-size: 17px;
+  margin-bottom: px;
+}
+
+.workTable li:nth-child(1)::first-letter{
+  background-color: #4e0404;
+  color: white;
+  font-size: 1.5em;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+
+.workTable li:nth-child(2)::first-letter{
+  background-color: #4e0404;
+  color: white;
+  font-size: 1.5em;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+
+.workTable li:nth-child(3)::first-letter{
+  background-color: #4e0404;
+  color: white;
+  font-size: 1.5em;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+
+.workTable li:nth-child(4)::first-letter{
+  background-color: #4e0404;
+  color: white;
+  font-size: 1.5em;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+
+.workTable li:nth-child(5)::first-letter{
+  background-color: #4e0404;
+  color: white;
+  font-size: 1.5em;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.contactForm {
+  margin-top: 20px;
+}
+
+.form-Item {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-Item label {
+  font-weight: bold;
+}
+
+.form-Item input, .form-Item select, .form-Item textarea {
+  padding: 8px;
+  font-size: 16px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.form-Item button {
+  padding: 10px;
+  font-size: 16px;
+  color: #fff;
+  background-color: #007bff;
+  border: none;
+  cursor: pointer;
+}
+
+
+
+/* Contact Us Media */
+@media screen and (max-width: 768px) {
+  .contentanimate .work-hours {
+      font-size: 1.8em;
+  }
+
+  .work-hours > span {
+      position: relative;
+      display: inline-block;
+      color: orangered;
+      height: 1.25em;
+      vertical-align: bottom;
+      overflow: hidden;
+      font-size: 1.1em;
+  }
+
+  .slideSpan {
+      font-size: .8em;
+  }
+
+  .contact-container {
+    max-width: 100%;
+    padding: 0px;
+    background: linear-gradient(to left, rgba(213, 116, 84, 0.749), #ffffffb4), url(freight-services.jpg);
+    background-repeat: no-repeat;
+    background-position-x: center;
+  }
+
+
+.contactUs-Item h2 {
+  font-size: 2rem;
+  border-radius: 12px;
+  text-align: center;
+  animation: bounce 2s infinite;
+}
+
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+    color: #ff1302;
+    text-shadow: 2px 0 1px rgb(132, 2, 2);
+  }
+  40% {
+    transform: translateY(-20px);
+    color: #4f0505;
+  }
+  60% {
+    transform: translateY(-10px);
+  }
+}
+}
+
+/* Animation */
 .work-hours > span {
   position: relative;
   display: inline-block;
@@ -1105,31 +1206,20 @@ text-align: center;
 }
 
 @keyframes animate1 {
-  0% {
-    transform: translateY(0%) scale(1);
-  }
-  25% {
-    transform: translateY(-100%) scale(1.3);
-  }
-  50% {
-    transform: translateY(-200%) scale(1);
-  }
-  75% {
-    transform: translateY(-300%) scale(1.3);
-  }
-  100% {
-    transform: translateY(-400%) scale(1);
+  0% {transform: translateY(0%);}
+  25% {transform: translateY(-100%);}
+  50% { transform: translateY(-200%);}
+  75% { transform: translateY(-300%);}
+  100% { transform: translateY(-400%);}
+  
 }
-}
-
-/* Contact Form Section */
 
 
 .contactForm {
-  max-width: 600px;
+  max-width: 800px;
   margin: 0 auto;
   padding: 10px;
-  background-color: #f9f9f925;
+  background-color: #f9f9f96d;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
 }
@@ -1137,7 +1227,7 @@ text-align: center;
 .form-Item {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 20px;
 }
 
 .FormNamebox {
@@ -1151,9 +1241,9 @@ text-align: center;
   flex-direction: column;
 }
 
-.form-label {
-  margin-bottom: 8px;
-  font-weight: bold;
+
+.form-control:focus + .form-label{
+  transform: translateY(-25px);
 }
 
 .form-control, .form-select, textarea {
@@ -1162,52 +1252,46 @@ text-align: center;
   border-radius: 4px;
 }
 
+.form-select{
+  width: 100px;
+}
+
 button.btn {
   padding: 10px;
-  background-color: #39010e;
+  background-color: #391202;
   color: white;
   border: none;
-  font-size: 18px;
-  font-family: 'Courier New', Courier, monospace;
-  font-weight: 600;
-  letter-spacing: 1px;
   border-radius: 4px;
   cursor: pointer;
 }
 
 button.btn:hover {
-  background-color: #401602fa;
-}
-
-#message{
-  resize: none;
+  background-color: #521703c8;
 }
 
 @media (max-width: 768px) {
   .FormNamebox {
       flex-direction: column;
   }
+
 }
 
 @media (max-width: 480px) {
   .contactForm {
-      /* padding: px; */
+      padding: 10px;
+      width: 100%;
   }
 
   button.btn {
-      padding: 12px;
+      padding: 10px;
       font-size: 16px;
   }
 }
 
-
-/* footer */
-
 .footer {
-  background: linear-gradient(to left, rgba(171, 130, 18, 0.596), #250303ca), url(customs\ img.jpg);
+  background: linear-gradient( to left, rgba(45, 12, 1, 0.749), #370101b4), url(customs\ img.jpg);
   color: white;
   background-position: center;
-  background-repeat: repeat;
   padding: 40px 0;
 }
 

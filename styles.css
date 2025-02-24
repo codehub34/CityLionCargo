@@ -9,7 +9,7 @@
         --footer-height: 50px;
         --font-family: Bebas;
         --navbar-bg-color: #ffffff; /* Define the navbar background color */
-      }
+}
   
        
 * {
@@ -32,14 +32,12 @@ header{
   left: 0;
   right: 0;
   z-index: 1000;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.603);
 }
 
   .navbar {
     display: flex;
     justify-content: space-around;
     align-items: center;
-
     background-color: var(--primary-color);
   
   }
@@ -48,10 +46,10 @@ header{
    max-width: 120px;
     border-radius: 5px;
     mix-blend-mode: multiply;
-   /* animation-name: move; */
+   animation-name: move;
    position: relative;
-   animation-duration: 8s;
-   animation-iteration-count: 2;
+   animation-duration: 3s;
+   animation-iteration-count: 3;
    animation-fill-mode: forwards;
     /* border-bottom: 2px solid var(--secondary-color); */
   }
@@ -118,68 +116,69 @@ header{
     list-style: none;
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    align-self: center;
     transition: transform 0.3s ease-in-out;
   }
   
   
   .nav-links li {
-    margin-left: 20px;
+    margin-left: 30px;
+    padding-top: 20px;
   }
-  
-  .nav-links a {
-    color: #4e0404;
+  .nav-links li>a {
+    color: #000000;
     text-decoration: none;
     font-size: 18px;
-    border-bottom-width: 2px solid orange ;
-  }
-
-  .nav-links>a:focus{
-    background-color: #4e0404;
-  }
-
-  .nav-links a:hover{
-   text-decoration: underline;
-  border-bottom: 2px solid rgb(54, 2, 2);
-  border-bottom-width: 6px solid orange ;
+   font-weight: 400;
+   font-family: Verdana, Geneva, Tahoma, sans-serif;
 
   }
-
-  .callus1{
-   margin-left: 8rem; 
-   color: white;
-  }
-
-   .Whatsapp-btn, .call-btn{
-    padding: 4px;
-    min-width: 9em;
-    background-color: #4e0404;
-    border: none;
-    border-radius: 8px;
-    color: white;
-    transition: 0.2s ease-out;
-  }
-
-  .call-btn a{
-    color: white;
-    font-size: 15px;
-  }
-
-  .Whatsapp-btn{
-    margin-left: 15px;
-  }
-
-  .Whatsapp-btn>a{
-    color: white;
-  }
-
   
-  .Whatsapp-btn:hover, .call-btn:hover{
-    background-color: #f7b80a;
-    border: 2px solid white;
-  }
 
-  .callus{
+  .nav-links li>a:focus-visible {
+    background-color: #15044e;
+    color: rgb(255, 255, 255);
+}
+
+.nav-links li>a:hover {
+    border-bottom: 6px solid rgb(255, 255, 255);
+    color: #4e0404;
+}
+
+  .callus1 {
+      margin-left: 10rem;
+      padding-top: 12px;
+      display: flex;
+  }
+  .call-btn, .whatsapp-btn {
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      text-decoration: none;
+      font-size: 16px;
+      width: 150px;
+      text-align: center;
+      font-weight: bold;
+      display: inline-block;
+  }
+  .call-btn {
+      background-color: #5e300f00;
+      color: white;
+      margin-right: 12px;
+      border: 2px solid maroon;
+      transition: all .2s ease;
+      &:hover{
+        background-color: #490303;
+        padding: none;
+        font-size: 15px;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+      }
+  }
+  .whatsapp-btn {
+      background-color: #00a23b;
+      color: white;
+  }
+   .callus{
     display: none;
   }
   .burger {
@@ -214,8 +213,6 @@ header{
   padding: 4% 50px;
   background-position: center;
   background-size: cover;
-
-  /* display: inline-block; */
 }
 .head-content {
   display: grid;
@@ -223,7 +220,6 @@ header{
   align-items: center;
   gap: 25px;
   padding: 10% 0px;
-
   backdrop-filter: blur(3px);
   background-color: #faf3e500;
   border-radius: 4px;
@@ -242,15 +238,19 @@ header{
     gap: 1em 2em;
     grid-template-columns: 1fr;
   }
-  
+
   .head-imglogo{
     max-width: 80px;
   }
+
   .head-text .zoomInBottom1{
     font-size: 3em;
   }
-  
+  .card{
+    width: 18.5rem;
+  }
 }
+
 @media (max-width: 480px) {
   .head-content{
     display: grid;
@@ -261,6 +261,7 @@ header{
   .head-imglogo{
     max-width: 80px;
   }
+
 .head-text .zoomInBottom1{
   font-size: 2em;
   padding-top: 6rem;
@@ -286,6 +287,7 @@ header{
     filter: drop-shadow(5px 15px 5px rgb(242, 151, 40));
   }
 }
+
 .head-imglogo{
   filter: drop-shadow( 15px 5px 5px white);
   width: 130px;
@@ -323,7 +325,6 @@ header{
   }
 }
 
-
 .head-text{
   display: inline-block; 
   backdrop-filter: blur(2px);
@@ -336,18 +337,19 @@ header{
         opacity: 0;
     }
 }
+
 .zoomInBottom1{
   text-transform: uppercase;
   font-family: "Rubik Wet Paint", system-ui;
   font-weight: 100;
   font-style: normal;
   text-align: left;
- font-size: 3.5rem;
- color: var(--primary-color);
- text-shadow: 0 2px 8px white;
- -webkit-text-stroke: 2px #490303;
- animation-name: zoomInBottom;
- animation-duration: 2s;
+  font-size: 3.5rem;
+  color: var(--primary-color);
+  text-shadow: 0 2px 8px white;
+  -webkit-text-stroke: 2px #490303;
+  animation-name: zoomInBottom;
+  animation-duration: 2s;
 }
 
 
@@ -365,10 +367,12 @@ header{
   justify-content: last baseline;
 
 }
+
 .contact-bt {
   background-color: transparent;
   border: none;
 }
+
 .contact-btn  {
   display: inline-block;
   padding: 10px 20px;
@@ -388,7 +392,8 @@ header{
   background-color: var(--secondary-color);
   transform: scale(1.05);
 }
-@media screen and (max-width: 768px) {
+
+@media screen and (max-width: 1024px) {
   .navbar {
     display: flex;
     justify-content: space-between;
@@ -410,6 +415,7 @@ text-align: center;
 text-decoration: none;
 text-align: center;
 }
+
 .nav-links {
   display: none;
   position: absolute;
@@ -427,6 +433,9 @@ text-align: center;
     color: var(--primary-color);
 }
 
+.card{
+  width: 20rem;
+}
 .nav-links li {
   margin: 10px 0;
 }
@@ -470,6 +479,7 @@ text-align: center;
   background-size: cover;
   /* display: inline-block; */
 }
+
 .head-content {
   display: grid;
   grid-template-columns: repeat(auto-fit, 200px, 1fr);
@@ -500,8 +510,11 @@ text-align: center;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  /* padding-top: 10%; */
   gap: 15px;
+}
+
+.card{
+  width: 18rem;
 }
 
 .card:nth-last-child(1){
@@ -532,8 +545,9 @@ text-align: center;
 }
 .card:hover{
   cursor: pointer;
-  transform: scale(1.08);
-  /* opacity: 0.6; */
+  transform: translateY(-8px);
+  opacity: 0.8;
+  box-shadow: 0 2px 0 1px white;
 }
 
 .card img{
@@ -576,14 +590,13 @@ text-align: center;
   justify-content: space-around;
   align-items: center;
   background: rgba(255, 251, 243, 0.726);
-  padding: auto 50px;
+  padding: 0 50px;
   background-position: center;
   background-size: cover;
 
 }
-
 .about-content{
-  border: 1px solid rgba(255, 255, 255, 0.2);
+ padding: 0;
  
 }
 
@@ -708,6 +721,8 @@ text-align: center;
     text-align: center;
   }
 
+
+
 .about-info-content .aboutQualify {
   font-family: fantasy;
   font-weight: 100;
@@ -721,7 +736,7 @@ text-align: center;
   justify-content: space-around;
   align-items: center;
   background:linear-gradient( to bottom, rgba(246, 219, 169, 0.966), rgba(61, 61, 225, 0.379)) ;
-  padding: auto 20px;
+  padding:0px;
   background-position: center;
   background-size: cover;
 
@@ -759,7 +774,7 @@ text-align: center;
     font-size: 25px;
   }
   .about-content{
-    padding: auto;
+    padding: 0;
   }
 
 
@@ -768,8 +783,16 @@ text-align: center;
   right: 0;
   color: #ffffff;
   font-size: 18px;
+  margin-right: 10px ;
+  animation: slideRight 2s ease 1;
 }
 
+@keyframes slideRight {
+  from{ 
+    transform: translateX(-10px);
+    background-color: rgb(255, 174, 0);
+  }
+}
 
 .container-about{
   display: flex;
@@ -777,13 +800,11 @@ text-align: center;
   justify-content: space-around;
   align-items: center;
   background: wheat;
-  padding: auto 10px;
+  padding: 0px;
   background-position: center;
   background-size: cover;
 
 }
-
-
 
  }
 /* About Page RIght Side */
@@ -927,6 +948,7 @@ text-align: center;
  justify-content: center;
   gap: 10px;
   flex-wrap: wrap;
+  /* padding: 0 20px; */
 }
 
 .card-service .service-img{
@@ -938,7 +960,7 @@ text-align: center;
 }
 
 .service-img{
-  Border-image: fill 0 linear-gradient(#0003, #00000056);
+  Border-image: fill 0 linear-gradient(#0003, #ff505056);
 }
 
 .card-service{
@@ -1009,7 +1031,7 @@ text-align: center;
 }
 
 
-.contact-item {
+.contact-us {
   width: 100%;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -1040,7 +1062,6 @@ text-align: center;
 .contactUs-Item{
  max-width: 100%;
  width: 500px;
- background: repeating-linear-gradient(to right, rgba(211, 138, 112, 0.274), #f1a3074d);
  padding: 10px 15px;
  border-radius: 6px;
 box-shadow: 0 4px 8px rgba(255, 255, 255, 0.234);

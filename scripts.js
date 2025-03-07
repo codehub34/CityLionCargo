@@ -1,46 +1,34 @@
-document.addEventListener('DOMContentLoaded', () => {
-  document.querySelector('form').onsubmit = (event) => {
-    event.preventDefault(); // Prevent form submission
 
-    // Get form values
-    const fullName = document.querySelector('#name').value;
-    const email = document.querySelector('#email').value;
-    const message = document.querySelector('#message').value;
-    const phone = document.querySelector('#phone').value;
-    const countryCode = document.querySelector('#countryCode').value; // Correct element ID
+const btn = document.getElementById('button');
+const userReply = document.querySelector('.userReply');
 
-    // Store data in localStorage
-    localStorage.setItem('fullName', fullName);
-    localStorage.setItem('email', email);
-    localStorage.setItem('message', message);
-    localStorage.setItem('phone', phone);
-    localStorage.setItem('countryCode', countryCode); // Store countryCode in localStorage
+document.getElementById('form')
+ .addEventListener('submit', function(event) {
+   event.preventDefault();
 
-    // Update the result div
-    document.querySelector('#result').innerHTML = `Thanks for contacting City Lion, ${fullName},<br>We'll get back to you as soon as we can!`;
+   btn.value = 'Sending...';
 
-    // Delay the construction of the mailto URL by 3 seconds
-    setTimeout(() => {
-      // Construct the mailto URL
-      const mailtoLink = `mailto:codehub65@gmail.com?subject=Contact%20Form%20Submission&body=Full%20Name:%20${encodeURIComponent(fullName)}%0AEmail:%20${encodeURIComponent(email)}%0APhone:%20${encodeURIComponent(countryCode)}%20${encodeURIComponent(phone)}%0AMessage:%20${encodeURIComponent(message)}`;
+   const serviceID = 'default_service';
+   const templateID = 'template_7xdyasn';
 
-      // Open the email client
-      window.location.href = mailtoLink;
-    }, 8000);
+   emailjs.sendForm(serviceID, templateID, this)
+    .then(() => {
+      btn.value = 'Send Email';
+      alert('Sent!');
+      setTimeout(() => {
+        userReply.innerHTML = 'Thank you for contacting us!';
+      }, 1000);
 
-    // Reset the form
-    document.querySelector('form').reset();
-
-    // Clear the result div after 10 seconds
-    setTimeout(() => {
-      document.querySelector('#result').innerHTML = '';
-    }, 5000);
-
-    return false;
-  };
+      setTimeout(() => {
+        userReply.innerHTML = '';
+      }, 5000);
+    }, (err) => {
+      btn.value = 'Send Email';
+      alert(JSON.stringify(err));
+    });
+document.getElementById('form').reset();
+    
 });
-
-
 
   
   const burger = document.querySelector('.burger');
